@@ -6,3 +6,5 @@ node_modules
 .tox
 *.egg-info/
 *.egg-info/**/*
+test/client/**/*
+!test/client/.gitkeep
