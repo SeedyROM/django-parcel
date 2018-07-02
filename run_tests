@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source env/bin/activate
+django-admin.py test --settings=test_settings
