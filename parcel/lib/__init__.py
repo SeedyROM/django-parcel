@@ -20,21 +20,23 @@ class __Parcel:
         pass
 
     def watch(self):
+        print(chalk.green('Parcel started...'))        
+
         if 'test' in sys.argv:
             self.build()
             return
 
+        print(chalk.green('Parcel is waiting...'))
         while self.watching or not TESTING:
             self.build()
             time.sleep(0.5)
+
+    def start(self):
+        atexit.register(self.stop)
+        self.watch_thread.start()
 
     def stop(self):
         print(chalk.yellow('Parcel is shutting down...'))
         self.watching = False
         self.watch_thread.join()
-
-
-    def start(self):
-        atexit.register(self.stop)
-        print(chalk.green('Parcel is waiting...'))
-        self.watch_thread.start()
+        print(chalk.green('Parcel finished'))
