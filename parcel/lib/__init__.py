@@ -3,11 +3,13 @@ import sys
 import time
 from threading import Thread
 
+import chalk
+
 from parcel.lib.singleton import Singleton
 
 
 @Singleton
-class __parcel:
+class __Parcel:
     watching = True
 
     def __init__(self):
@@ -27,12 +29,12 @@ class __parcel:
             time.sleep(0.5)
 
     def stop(self):
-        print('Parcel is shutting down...')
+        print(chalk.yellow('Parcel is shutting down...'))
         self.watching = False
         self.watch_thread.join()
 
 
     def start(self):
         atexit.register(self.stop)
-        print('Parcel is waiting...')
+        print(chalk.green('Parcel is waiting...'))
         self.watch_thread.start()
