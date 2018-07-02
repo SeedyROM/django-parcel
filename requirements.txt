@@ -1,8 +1,8 @@
 Django==2.0.6
-## !! Could not determine repository location
-django-parcel==0.0.1
+-e git+git@github.com:SeedyROM/django-parcel.git@9ee481bfe5b96bff06c5239f72491b8f57cea156#egg=django_parcel
 pluggy==0.6.0
 py==1.5.4
+pychalk==2.0.0
 pytz==2018.5
 six==1.11.0
 tox==3.0.0
