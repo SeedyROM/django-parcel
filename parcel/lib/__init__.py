@@ -7,7 +7,7 @@ from parcel.lib.singleton import Singleton
 
 
 @Singleton
-class Parcel:
+class __parcel:
     watching = True
 
     def __init__(self):

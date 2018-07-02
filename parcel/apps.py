@@ -1,10 +1,9 @@
 from django.apps import AppConfig
-
-from parcel.lib.entry_point import start_parcel
+from parcel import Parcel
 
 
 class ParcelConfig(AppConfig):
     name = 'parcel'
 
     def ready(self):
-        start_parcel()
+        Parcel.start()
