@@ -1,6 +1,8 @@
 MANIFEST.in
 README.rst
+requirements.txt
 setup.py
+tox.ini
 django_parcel.egg-info/PKG-INFO
 django_parcel.egg-info/SOURCES.txt
 django_parcel.egg-info/dependency_links.txt

@@ -1,0 +1,9 @@
+Django==2.0.6
+## !! Could not determine repository location
+django-parcel==0.0.1
+pluggy==0.6.0
+py==1.5.4
+pytz==2018.5
+six==1.11.0
+tox==3.0.0
+virtualenv==16.0.0
