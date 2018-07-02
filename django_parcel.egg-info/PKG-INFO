@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: django-parcel
+Version: 0.0.1
+Summary: Combining Django 2.0 and Parcel in a more sane and stable way.
+Home-page: https://github.com/SeedyROM/django-parcel/
+Author: Zack Kollar (SeedyROM)
+Author-email: me@seedyrom.io
+License: MIT
+Description: # django-parcel (WIP)
+        
+        Version 0.0.1
+Platform: UNKNOWN
