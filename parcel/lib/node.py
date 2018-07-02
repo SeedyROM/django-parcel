@@ -15,7 +15,7 @@ def check_node_installed():
         raise NodeNotInstalledException
 
 def test_npm():
-    result = subprocess.run(
+    subprocess.run(
         f'mkdir -p {parcel.Parcel.client_path} && cd {parcel.Parcel.client_path} && npm init -y',
         shell=True,
         stdout=subprocess.DEVNULL

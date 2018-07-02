@@ -27,11 +27,9 @@ class __Parcel:
             self.client_path = os.path.join(settings.BASE_DIR, 'client')
 
     def build(self):
-        print(self.client_path)
-        node.test_npm()
+        pass
 
     def watch(self):  
-        node.check_node_installed()    
         print(chalk.green(f'Parcel started... (Node v{self.node_version})'))        
 
         if 'test' in sys.argv:
@@ -44,11 +42,13 @@ class __Parcel:
             time.sleep(0.5)
 
     def start(self):
+        node.check_node_installed()
+        node.test_npm()           
         self.watch_thread.start()
         atexit.register(self.stop)
 
     def stop(self):
         self.watching = False
+        print(chalk.yellow('Parcel shutting down...'))
         self.watch_thread.join()
-        print(chalk.yellow('Parcel is shutting down...'))
-        print(chalk.green('Parcel finished'))
+        print(chalk.green('Parcel finished!'))

@@ -17,4 +17,4 @@ DATABASES = {
 
 
 # Custom settings
-PARCEL_CLIENT_PATH = 'client'
+# PARCEL_CLIENT_PATH = 'client' # Default
