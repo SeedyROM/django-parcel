@@ -16,5 +16,6 @@ setup(
     license='MIT',
     install_requires=[
         'Django>=2.0',
+        'pychalk>=2.0.0',
     ]
 )
