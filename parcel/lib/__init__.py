@@ -27,11 +27,12 @@ class __Parcel:
             self.client_path = os.path.join(settings.BASE_DIR, 'client')
 
     def build(self):
-        pass
+        node.start_parcel_development_server()     
+        node.find_dist_files() 
 
     def watch(self):  
-        print(chalk.green(f'Parcel started... (Node v{self.node_version})'))        
-
+        print(chalk.green(f'Parcel started... (Node v{self.node_version})'))
+        
         if 'test' in sys.argv:
             self.build()
             return
@@ -43,7 +44,8 @@ class __Parcel:
 
     def start(self):
         node.check_node_installed()
-        node.test_npm()           
+        # node.configure_parcel_project()
+
         self.watch_thread.start()
         atexit.register(self.stop)
 
